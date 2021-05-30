@@ -1,0 +1,34 @@
+List of functionalities:
+
+•	Product Management (Alangkrita)
+
+
+	addProducts, editProducts, viewProducts,
+	viewProductsbyID, viewProductsbyName
+
+
+•	Cart Management (Sukannya)
+
+	addItemstoCart, editItemtoCart, 
+	deleteItemsinCart, viewItemsinCartbyUser
+
+
+•	Order / Buy Products (Atanu)
+ 
+	generateOrder / createOrder,
+	viewOrdersbyUserID, viewOrdersbyOrderID, 
+	displayOrderDetails
+
+
+•	Product Specifications (Souhardya)
+ 
+	addProdSpec, viewProdSpecbyprodID, editProdSpec, 
+	deleteProdSpec 
+
+
+•	Payment 
+(Wriju)
+	viewPaymentbyUserID, viewpaymentTranxdetails, addpayment
+
+
+

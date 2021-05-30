@@ -1,0 +1,108 @@
+package com.cg.entity;
+
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "cg_customer")
+public class Customer {
+
+	@Id
+	@Column(name = "cust_id")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private String customerId;
+	@Column(name = "cust_name")
+	private String customerName;
+	@Column(name = "cust_email")
+	private String customerEmail;
+	@Column(name = "cust_phone")
+	private String customerPhone;
+	@Column(name = "cust_address")
+	@OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
+	private Address customerAddress;
+	/*@OneToMany(mappedBy = "customer",fetch = FetchType.EAGER,cascade=CascadeType.ALL)
+//	@Column(name = "product_order")
+	private Set<ElectronicProductOrder> electronicProductOrderSet;
+	@Column(name = "electronic_products")
+	private List<ElectronicProduct> productList;
+	@OneToOne()
+	private Basket basket;*/
+
+	public String getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
+	}
+
+	public String getCustomerName() {
+		return customerName;
+	}
+
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+
+	public String getCustomerEmail() {
+		return customerEmail;
+	}
+
+	public void setCustomerEmail(String customerEmail) {
+		this.customerEmail = customerEmail;
+	}
+
+	public String getCustomerPhone() {
+		return customerPhone;
+	}
+
+	public void setCustomerPhone(String customerPhone) {
+		this.customerPhone = customerPhone;
+	}
+
+	public Address getCustomerAddress() {
+		return customerAddress;
+	}
+
+	public void setCustomerAddress(Address customerAddress) {
+		this.customerAddress = customerAddress;
+	}
+
+	public Set<ElectronicProductOrder> getElectronicProductOrderSet() {
+		return electronicProductOrderSet;
+	}
+
+	public void setElectronicProductOrderSet(Set<ElectronicProductOrder> electronicProductOrderSet) {
+		this.electronicProductOrderSet = electronicProductOrderSet;
+	}
+
+	public List<ElectronicProduct> getProductList() {
+		return productList;
+	}
+
+	public void setProductList(List<ElectronicProduct> productList) {
+		this.productList = productList;
+	}
+
+	public Basket getBasket() {
+		return basket;
+	}
+
+	public void setBasket(Basket basket) {
+		this.basket = basket;
+	}
+
+}

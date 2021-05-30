@@ -1,0 +1,36 @@
+package com.cg.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "cg.product_type")
+public class ProductType {
+	@Id
+	@Column(name="type_id")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int prdTypeId;
+	@Column(name="type_name")
+	private String name;
+
+	public int getPrdTypeId() {
+		return prdTypeId;
+	}
+
+	public void setPrdTypeId(int prdTypeId) {
+		this.prdTypeId = prdTypeId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+}

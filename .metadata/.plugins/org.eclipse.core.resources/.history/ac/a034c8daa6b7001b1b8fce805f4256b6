@@ -1,0 +1,5 @@
+package com.cg.eshop.exception;
+
+public class BankDetailsDidntMatchException {
+
+}

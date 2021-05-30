@@ -1,0 +1,8 @@
+
+s
+java:S2259"IA "NullPointerException" could be thrown; "getMessage()" can return null.(‰ÑæÓùÿÿÿÿH‹RMAJORZBUG
+s
+java:S2259%"IA "NullPointerException" could be thrown; "getMessage()" can return null.(‰ÑæÓùÿÿÿÿHŽRMAJORZBUG
+]
+java:S1612-",Replace this lambda with a method reference.(•¡Ë«þÿÿÿÿH‘RMINORZ
+CODE_SMELL

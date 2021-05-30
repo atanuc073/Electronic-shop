@@ -1,0 +1,7 @@
+
+m
+java:S1128"BRemove this unused import 'com.cg.exception.EmpNotFoundException'.(Æ–ëIHˆRMINORZ
+CODE_SMELL
+{
+java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Š´¨ÞúÿÿÿÿH‰RMINORZ
+CODE_SMELL

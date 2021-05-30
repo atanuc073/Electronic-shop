@@ -1,0 +1,5 @@
+package com.cg.eshop.dto;
+
+public class PaymentReqDto {
+
+}

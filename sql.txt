@@ -1,0 +1,71 @@
+cg_customer table:
+
+rows:
+
+insert into cg_customer (cust_id,address,city,country,cust_email,cust_name,cust_phone,postal_code,state)
+values(1001,"18 no sashibusan lane","kolkata","India","atanuc67@gmail.com","atanu","8017234333","700023","west bengal"),
+(1002,"3 no mg road","mumbai","India","newone97@gmail.com","rohit","9876543212","600076","maharastra");
+
+cg_order_products table:
+
+rows:
+
+insert into cg_order_products (order_id,order_date,order_status,total_cost,cust_id)
+values
+(101,"2021-03-12","ordered",2500.0,1001),
+(102,"2020-04-17","delivered",1500.0,1001)
+(103,"2021-02-17","ordered",4000.0,1002)
+(104,"2020-12-09","delivered",800.0,1002);
+
+
+cg_category table :
+
+rows:
+
+insert into cg_category (category_id,category_name)
+values
+(11,"MOBILE"),
+(12,"TELEVISION"),
+(13,"REFRIGERATOR");
+
+cg_elec_prod_specs table :
+
+rows
+
+insert into cg_elec_prod_specs
+values
+(204,"resolution","HDR",1001),
+(205,"ram","8GB",1002),
+(206,"capacity","80Litre",1003);
+(201,"screen size","21",1001),
+(202,"camera pixal","13",1002),
+(203,"power rating",160,1003);
+
+cg_electronic_product_details table :
+
+row
+
+insert into cg_electronic_product_details
+values
+(1002,"MOB_101","2020-09-12","mi mobile image","mi mobile",12000.0,50,11),
+(1001,"TV_101","2019-08-08","onida tv image","onida Tv",18000.0,30,12),
+(1003,"REFRIGERATOR_101","2021-02-08","Lg refrigerator image","LG refrigerator",16000.0,40,13);
+
+
+cg_ordered_product_details table:
+
+rows :
+
+insert into cg_ordered_product_details
+values
+(101,1001,101),
+(102,1002,101),
+(103,1002,102),
+(104,1001,102),
+(105,1003,102),
+(106,1003,103),
+(107,1002,104),
+(108,1003,104);
+
+
+

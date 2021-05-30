@@ -1,0 +1,5 @@
+package com.cg.eshop.dao;
+
+public class IBankTranxDao {
+
+}

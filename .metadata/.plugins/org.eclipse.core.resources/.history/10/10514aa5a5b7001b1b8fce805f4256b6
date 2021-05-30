@@ -1,0 +1,5 @@
+package com.cg.eshop.advice;
+
+public class PaymentAdvice {
+
+}

@@ -1,0 +1,43 @@
+adding a new product 
+	public product addProduct (productRequestDto){
+		findCategory if not found throw exception 
+		bind dto to product entity class
+		save product entity class and return 
+	}
+	
+ordering a product 
+	public orderproduct makeorder(Integer customerId ){
+		find customer if not found throw exception 
+		view all items in the cart by customer ID
+		create order entity class and save it 	
+		iterating all the items in the cart list 
+			bind cart item to order product details entity class
+			set order entity to order product details 
+			update product stock 
+			save product entity class 
+			save order product details entity class
+		remove all the items in the cart list using customer ID
+	}
+add items to cart 
+	public basket addItemstoBasket (basketRequestDto){
+		find customer if not found throw exception 
+		find product if not found throw exception
+		bind dto to basket entity class
+		set customer to basket entity class
+		set product to basket entity class
+		save basket entity class and return it 
+	}
+
+making payment 
+	public bankTransaction makePayment (paymentRequestDto){
+		find bank account if not found throw exception
+		find order if not found throw exception 
+		verify cvv no and exp date card holder's name if not found throw exception
+		check sufficient amount in bank account if not throw exception
+		create a bank tranx entity class 
+		set current date, bank account and order entity class
+		update amount in bank account class
+		save bank account 
+		save bank tranx
+		return bank tranx
+	}

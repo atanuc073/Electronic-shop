@@ -1,0 +1,36 @@
+Alangkrita : Product Management & category-
+		handle product and category entity classes
+		1. add new category
+ 		2. view all categories 
+		3. add a new product for a specific categroy 
+		4. view products by category name 
+		5. view products by ID
+Souhardya : Product Specifications-
+		handle product spec and product entity classes 
+		first enter data in product table 
+		1. add a new product spec for a given product ID 
+		2. view product spec for product ID 
+		3. view product spec by spec ID 
+		4. edit product spec by spec ID
+Sukanya : Cart management-
+		handle customer, product & cart entity classes 
+		first enter data in customer, product spec and product 
+		1. add in items into cart for custID
+		2. removing items from cart for cust ID
+		3. editing is optional
+		4. view items from cart for given cust ID 
+ Atanu : Order Management-
+		handle order product details, order product & customer entity classes
+		must have sufficient data in customer, porduct, product spec & basket item table 
+		1. order products 
+		2. cancle order
+		3. view order by order ID
+		4. view orders by cust ID
+		5. view orders' details by order ID
+Wriju : Payment management- 
+		 handle bank transaction, bank account & order products entity classes 
+		 must enter data in all the tables except basket (data must be in hierarchiacal format)
+		1. make payment 
+		2. view payment by cust ID
+		3. view payment by payment ID (bank tranx ID)
+		4. view payment by order ID 	

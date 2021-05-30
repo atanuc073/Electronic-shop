@@ -1,0 +1,33 @@
+package com.cg;
+
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.cg.dao.IDeptDao;
+import com.cg.dao.IEmpDao;
+import com.cg.entity.Dept;
+import com.cg.service.EmpServiceImpl;
+import com.cg.service.IEmpService;
+
+@SpringBootTest
+public class TestAddEmp {
+	@Mock
+	private IEmpDao empdao;
+	@Mock
+	private IDeptDao deptdao;
+	
+	@InjectMocks
+	private IEmpService service = new EmpServiceImpl();
+	
+	@BeforeEach
+	public void beforeEach() {
+		when(deptdao.findByDeptName("HR")).thenReturn(new Dept());
+		when(deptdao.findByDeptName("Choukidar")).thenReturn(null);
+		Emp persisted = new 
+	}
+
+}

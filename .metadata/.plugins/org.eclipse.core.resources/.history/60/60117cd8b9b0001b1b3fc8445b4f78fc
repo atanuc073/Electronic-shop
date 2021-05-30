@@ -1,0 +1,53 @@
+package com.cg.entity;
+
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Map;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+@Entity
+@Table(name="cg_basket")
+public class Basket {
+/*	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="basket_id")
+	private String basketId;
+	@OneToOne(mappedBy = "basket")
+	private Customer customer;
+//	@OneToMany(mappedBy = "basket")
+//	@Column(name="productList")
+	private Map<ElectronicProduct, Integer> productList;
+
+	public String getBasketId() {
+		return basketId;
+	}
+
+	public void setBasketId(String basketId) {
+		this.basketId = basketId;
+	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	public Map<ElectronicProduct, Integer> getProductList() {
+		return productList;
+	}
+
+	public void setProductList(Map<ElectronicProduct, Integer> productList) {
+		this.productList = productList;
+	}*/
+
+}

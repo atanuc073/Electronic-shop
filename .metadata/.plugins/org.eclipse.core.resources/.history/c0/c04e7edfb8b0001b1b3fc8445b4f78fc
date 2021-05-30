@@ -1,0 +1,108 @@
+package com.cg.entity;
+
+import java.time.LocalDate;
+import java.util.Map;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+@Entity
+@Table(name="cg_ElectronicsProductOrder")
+public class ElectronicProductOrder {
+	
+	@Id
+	@Column(name="orderId")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private String orderId;
+	@Column(name="order_date")
+	private LocalDate orderDate;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name="cust_id",referencedColumnName = "cust_id")
+//	@Column(name="customer")
+	private Customer customer;
+//	@Column(name="product_list")
+	@OneToMany(mappedBy = "electronicsproductorder")
+	private Map<ElectronicProduct, Integer> productList;
+	@ManyToOne()
+//	@Column(name="shipping_address")
+	private Address ShippingAddress;
+	@ManyToOne
+//	@Column(name="billing_address")
+	private Address billingAddress;
+	@Column(name="totalAmount")
+	private double totalAmount;
+	@Column(name="orderStatus")
+	private String orderStatus;
+
+	public String getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(String orderId) {
+		this.orderId = orderId;
+	}
+
+	public LocalDate getOrderDate() {
+		return orderDate;
+	}
+
+	public void setOrderDate(LocalDate orderDate) {
+		this.orderDate = orderDate;
+	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	public Map<ElectronicProduct, Integer> getProductList() {
+		return productList;
+	}
+
+	public void setProductList(Map<ElectronicProduct, Integer> productList) {
+		this.productList = productList;
+	}
+
+	public Address getShippingAddress() {
+		return ShippingAddress;
+	}
+
+	public void setShippingAddress(Address shippingAddress) {
+		ShippingAddress = shippingAddress;
+	}
+
+	public Address getBillingAddress() {
+		return billingAddress;
+	}
+
+	public void setBillingAddress(Address billingAddress) {
+		this.billingAddress = billingAddress;
+	}
+
+	public double getTotalAmount() {
+		return totalAmount;
+	}
+
+	public void setTotalAmount(double totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+
+	public String getOrderStatus() {
+		return orderStatus;
+	}
+
+	public void setOrderStatus(String orderStatus) {
+		this.orderStatus = orderStatus;
+	}
+
+}
